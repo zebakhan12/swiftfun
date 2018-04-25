@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Stickk V1
 //
-//  Created by Zeba Hashimi on 4/24/18.
+//  Created by Zeba Khan on 4/24/18.
 //  Copyright © 2018 Zeba Khan. All rights reserved.
 //
 
