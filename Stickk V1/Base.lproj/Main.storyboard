@@ -18,9 +18,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Omw-zw-iMo">
-                                <rect key="frame" x="154" y="275" width="65.5" height="20.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Omw-zw-iMo">
+                                <rect key="frame" x="137.5" y="273.5" width="100" height="30"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C0O-B7-Ce1">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="Qzm-4O-hZx"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="XLM-cy-KW9"/>
+                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Qmo-sR-ifH">
                                 <rect key="frame" x="143.5" y="323.5" width="88.5" height="20.5"/>
@@ -40,18 +53,40 @@
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cXh-Ot-mIw"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ASA-gS-iYd">
+                                <rect key="frame" x="137.5" y="223.5" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="3Nh-nm-RVR"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5xZ-jg-tnc">
+                                <rect key="frame" x="163" y="167" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ASA-gS-iYd" firstAttribute="top" secondItem="5xZ-jg-tnc" secondAttribute="bottom" constant="25.5" id="6Hh-RW-z5E"/>
+                            <constraint firstItem="C0O-B7-Ce1" firstAttribute="top" secondItem="ASA-gS-iYd" secondAttribute="bottom" constant="20" id="70Y-U9-2DR"/>
+                            <constraint firstItem="5xZ-jg-tnc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8oc-IT-oPD"/>
                             <constraint firstItem="Qmo-sR-ifH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="A5r-gW-YGj"/>
                             <constraint firstItem="aAv-yY-3is" firstAttribute="top" secondItem="TV8-Ua-gGF" secondAttribute="bottom" constant="20" id="Cwh-1m-DyF"/>
                             <constraint firstItem="Qmo-sR-ifH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YIV-tu-0Bh"/>
                             <constraint firstItem="aAv-yY-3is" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bGt-Ao-u05"/>
+                            <constraint firstItem="ASA-gS-iYd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eSg-K7-ckK"/>
+                            <constraint firstItem="TV8-Ua-gGF" firstAttribute="top" secondItem="C0O-B7-Ce1" secondAttribute="bottom" constant="20" id="qEz-jK-jw0"/>
+                            <constraint firstItem="Omw-zw-iMo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wXe-hR-zcc"/>
+                            <constraint firstItem="Omw-zw-iMo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wzz-Tk-fz4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="additionSwitch" destination="5xZ-jg-tnc" id="eUb-Bn-aGm"/>
+                        <outlet property="bottomTextField" destination="C0O-B7-Ce1" id="UNS-Tk-ITH"/>
                         <outlet property="myLabel" destination="TV8-Ua-gGF" id="FuL-iY-zGx"/>
+                        <outlet property="topTextField" destination="ASA-gS-iYd" id="d4M-Ey-vIE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
